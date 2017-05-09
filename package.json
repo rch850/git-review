@@ -1,0 +1,22 @@
+{
+  "name": "git-review",
+  "version": "1.0.0",
+  "description": "Make detached head to review target branch",
+  "main": "index.js",
+  "bin": {
+    "git-review": "bin/git-review"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rch850/git-review.git"
+  },
+  "author": "rch850 <rich850@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rch850/git-review/issues"
+  },
+  "homepage": "https://github.com/rch850/git-review#readme"
+}
