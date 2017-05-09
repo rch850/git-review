@@ -2,7 +2,13 @@
 
 Make detached head to review target branch.
 
-Usage:
+## Install
+
+```
+npm install -g rch850/git-review
+```
+
+## Usage
 
 ```
 GitLab style:
