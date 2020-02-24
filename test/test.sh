@@ -25,6 +25,18 @@ git checkout origin/TARGET
 git merge --no-ff origin/FEATURE
 )
 
+diff -u <($(dirname $0)/../bin/git-review username wants to merge 1 commit into TARGET from FEATURE) <(cat <<EOT
+git fetch origin
+git checkout origin/TARGET
+git merge --no-ff origin/FEATURE
+)
+
+diff -u <($(dirname $0)/../bin/git-review username wants to merge 100 commits into TARGET from FEATURE) <(cat <<EOT
+git fetch origin
+git checkout origin/TARGET
+git merge --no-ff origin/FEATURE
+)
+
 ###################################################
 # lang: ja
 ###################################################
