@@ -13,6 +13,7 @@ npm install -g rch850/git-review
 ```
 GitLab copy-and-paste style:
  git review Request to merge FEATURE into TARGET
+ マージをリクエスト FEATURE → TARGET
 
 GitHub copy-and-paste style:
  username wants to merge 1 commit into TARGET from FEATURE

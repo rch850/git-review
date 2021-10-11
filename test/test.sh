@@ -47,3 +47,9 @@ git checkout origin/TARGET
 git merge --no-ff origin/FEATURE
 )
 
+diff -u <($(dirname $0)/../bin/git-review マージをリクエスト FEATURE → TARGET) <(cat <<EOT
+git fetch origin
+git checkout origin/TARGET
+git merge --no-ff origin/FEATURE
+)
+

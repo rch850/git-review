@@ -12,6 +12,7 @@ Usage:
 
 GitLab copy-and-paste style:
  git review Request to merge FEATURE into TARGET
+ マージをリクエスト FEATURE → TARGET
 
 GitHub copy-and-paste style:
  username wants to merge 1 commit into TARGET from FEATURE
@@ -30,7 +31,7 @@ fi
 readonly MR_PREFIX_EN="Request to merge"
 readonly ARGS_REGEX_EN="^${MR_PREFIX_EN} ([^ ]+) into ([^ ]+)"
 readonly MR_PREFIX_JA="マージをリクエスト"
-readonly ARGS_REGEX_JA="^${MR_PREFIX_JA} ([^ ]+) into ([^ ]+)"
+readonly ARGS_REGEX_JA="^${MR_PREFIX_JA} ([^ ]+) (into|→) ([^ ]+)"
 
 readonly PR_PREFIX_EN="wants to merge"
 readonly PR_ARGS_REGEX_EN="^.* ${PR_PREFIX_EN} [0-9]* commits? into ([^ ]+) from ([^ ]+)"
@@ -44,7 +45,7 @@ case "$*" in
     ;;
   "${MR_PREFIX_JA}"* )
     if [[ "$*" =~ ${ARGS_REGEX_JA} ]]; then
-      $0 ${BASH_REMATCH[1]} ${BASH_REMATCH[2]}
+      $0 ${BASH_REMATCH[1]} ${BASH_REMATCH[3]}
       exit
     fi
     ;;
